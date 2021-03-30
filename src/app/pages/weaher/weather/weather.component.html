@@ -1,0 +1,6 @@
+<p>weather works!</p>
+<div *ngIf="showWeather">
+  {{coordinates}}
+  <app-current-weather></app-current-weather>
+  <app-weather-chart [coordinates]="coordinates"></app-weather-chart>
+</div>

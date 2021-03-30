@@ -1,0 +1,14 @@
+<div id="map" class="map" ></div>
+<div id="popup" class="ol-popup">
+  <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+  <div id="popup-content"></div>
+  <div *ngIf="showButton==='weather'; else hideBlock">
+    <button class="btn btn-outline-info btn-block" (click)="onShowWeatherForecast()">Show forecast</button>
+    <button class="btn btn-outline-danger btn-block" (click)="onHideForecast()">Hide</button>
+  </div>
+  <div *ngIf="showButton==='place'; else hideBlock">
+    <a routerLink="/place/add" ><button class="btn btn-outline-info btn-block" (click)="onShowAddPlace()">Add place</button></a>
+  </div>
+  <ng-template #hideBlock></ng-template>
+</div>
+
